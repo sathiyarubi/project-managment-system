@@ -1,0 +1,51 @@
+<h1>Listing timesheet_details</h1>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Activity</th>
+    <th>Description</th>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Total hours</th>
+    <th>Timesheet</th>
+    <th>Employee</th>
+    <th>Project</th>
+    <th>Activity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @timesheet_details.each do |timesheet_detail| %>
+  <tr>
+    <td><%= timesheet_detail.project %></td>
+    <td><%= timesheet_detail.activity %></td>
+    <td><%= timesheet_detail.description %></td>
+    <td><%= timesheet_detail.sunday %></td>
+    <td><%= timesheet_detail.monday %></td>
+    <td><%= timesheet_detail.tuesday %></td>
+    <td><%= timesheet_detail.wednesday %></td>
+    <td><%= timesheet_detail.thursday %></td>
+    <td><%= timesheet_detail.friday %></td>
+    <td><%= timesheet_detail.saturday %></td>
+    <td><%= timesheet_detail.total_hours %></td>
+    <td><%= timesheet_detail.timesheet_id %></td>
+    <td><%= timesheet_detail.employee_id %></td>
+    <td><%= timesheet_detail.project_id %></td>
+    <td><%= timesheet_detail.activity_id %></td>
+    <td><%= link_to 'Show', timesheet_detail %></td>
+    <td><%= link_to 'Edit', edit_timesheet_detail_path(timesheet_detail) %></td>
+    <td><%= link_to 'Destroy', timesheet_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Timesheet detail', new_timesheet_detail_path %>

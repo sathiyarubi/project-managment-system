@@ -1,0 +1,47 @@
+<h1 id="table-header">List of clients</h1>
+<div class="row">
+    <div class="push-8 column">
+	<%if current_user.role.name == "Admin"%>
+	   <%= link_to 'New Client',  new_client_path, class: "button" %>
+	<% end %>        
+    </div>
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Company</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Phone</th>
+    <th>Zip</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clients.each do |client| %>
+  <tr>
+    <td><%= link_to client.name, client%></td>
+    <td><%= client.email %></td>
+    <td><%= client.address %></td>
+    <td><%= client.company %></td>
+    <td><%= client.city %></td>
+    <td><%= client.state %></td>
+    <td><%= client.phone %></td>
+    <td><%= client.zip %></td>
+
+    <% if can? :update, @clients %>
+    <td><%= link_to 'Edit', edit_client_path(client), class: "button round" %></td>
+    <% end %>
+    <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' }, class: "button round" %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<div class="custom-pagination">
+
+   		 <%= will_paginate @clients %>
+</div>

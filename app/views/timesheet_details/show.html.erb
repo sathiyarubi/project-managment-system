@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project:</b>
+  <%= @timesheet_detail.project %>
+</p>
+
+<p>
+  <b>Activity:</b>
+  <%= @timesheet_detail.activity %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @timesheet_detail.description %>
+</p>
+
+<p>
+  <b>Sunday:</b>
+  <%= @timesheet_detail.sunday %>
+</p>
+
+<p>
+  <b>Monday:</b>
+  <%= @timesheet_detail.monday %>
+</p>
+
+<p>
+  <b>Tuesday:</b>
+  <%= @timesheet_detail.tuesday %>
+</p>
+
+<p>
+  <b>Wednesday:</b>
+  <%= @timesheet_detail.wednesday %>
+</p>
+
+<p>
+  <b>Thursday:</b>
+  <%= @timesheet_detail.thursday %>
+</p>
+
+<p>
+  <b>Friday:</b>
+  <%= @timesheet_detail.friday %>
+</p>
+
+<p>
+  <b>Saturday:</b>
+  <%= @timesheet_detail.saturday %>
+</p>
+
+<p>
+  <b>Total hours:</b>
+  <%= @timesheet_detail.total_hours %>
+</p>
+
+<p>
+  <b>Timesheet:</b>
+  <%= @timesheet_detail.timesheet_id %>
+</p>
+
+<p>
+  <b>Employee:</b>
+  <%= @timesheet_detail.employee_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @timesheet_detail.project_id %>
+</p>
+
+<p>
+  <b>Activity:</b>
+  <%= @timesheet_detail.activity_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_timesheet_detail_path(@timesheet_detail) %> |
+<%= link_to 'Back', timesheet_details_path %>

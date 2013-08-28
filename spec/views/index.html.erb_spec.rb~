@@ -1,0 +1,9 @@
+#getting spec-helper
+ require 'spec_helper'
+ 
+ describe 'index' do
+
+    it "signs me in" do
+    		visit 'employees_path'
+    end
+ end

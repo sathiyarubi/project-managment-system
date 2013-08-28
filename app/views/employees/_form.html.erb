@@ -1,0 +1,38 @@
+
+<div class="row" id="profile-row">
+    <div class="small-4 columns">
+	<%= simple_form_for @employee,  :validate => true do |f| %>
+
+	    <%= f.input :name, input_html: { class: 'input-length' } %>
+
+	    <%= f.input :email, input_html: { class: 'input-length' } %>
+
+	    <%= f.input :password, input_html: { class: 'input-length' } %>
+
+	    <%= f.input :password_confirmation, input_html: { class: 'input-length' } %>
+
+	    <%= f.input :dob, input_html: { class: 'input-length' },required: true  %>
+	    
+	    <%= f.input :gender, collection: [:male, :female],prompt: "Select your gender", input_html: { class: 'input-length' }  %>
+	    
+	    <%= f.input :address, input_html: { class: 'input-length' } %>
+
+	    <%= f.input :city, input_html: { class: 'input-length' } %>
+	  
+	    <%= f.input :state, input_html: { class: 'input-length' } %>
+
+	    <%= f.input :pin_code, input_html: { class: 'input-length' } %>
+
+	    <%= f.input :mobile_no, input_html: { class: 'input-length' } %>
+	    
+	    <%= f.association :role,prompt: "Select your role", input_html: { class: 'input-length' } %>
+
+	    <%= f.association :manager, :collection => Employee.where(:role_id =>3), prompt: "Select your manager", input_html: { class: 'input-length' } %>
+
+            <br /><br /><br />
+
+	    <%= f.button :submit,:style =>"align:center"%>
+
+	<% end %>
+   </div>
+</div>

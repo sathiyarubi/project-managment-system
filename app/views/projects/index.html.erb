@@ -1,0 +1,39 @@
+
+<h1 id="table-header">List of projects</h1>
+<div class="row">
+    <div class="push-6 column">
+	<%if current_user.role.name == "Admin"%>
+	   <%= link_to 'New Project',  new_project_path, class: "button" %>
+	<% end %>        
+    </div>
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Client</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+
+  <tr>
+    <td><%= link_to project.name, project %></td>
+    <td><%= project.start_date %></td>
+    <td><%= project.end_date %></td>
+    <td><%= project.client.name rescue "error" %> </td>
+     <% if can? :update, @projects %>
+    <td><%= link_to 'Edit', edit_project_path(project),:class=>"button round" %></td>
+      <% end %>
+    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' },:class=>"button round" %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<div class="custom-pagination">
+   <%= will_paginate @projects %>
+</div>

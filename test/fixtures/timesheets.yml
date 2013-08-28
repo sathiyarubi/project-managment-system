@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sunday: MyString
+  monday: MyString
+  tuesday: MyString
+  wednesday: MyString
+  thursday: MyString
+  friday: MyString
+  saturday: MyString
+  total_hours: MyString
+  week_start_date: MyString
+  status: MyString
+  employee_id: MyString
+
+two:
+  sunday: MyString
+  monday: MyString
+  tuesday: MyString
+  wednesday: MyString
+  thursday: MyString
+  friday: MyString
+  saturday: MyString
+  total_hours: MyString
+  week_start_date: MyString
+  status: MyString
+  employee_id: MyString

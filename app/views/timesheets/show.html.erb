@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sunday:</b>
+  <%= @timesheet.sunday %>
+</p>
+
+<p>
+  <b>Monday:</b>
+  <%= @timesheet.monday %>
+</p>
+
+<p>
+  <b>Tuesday:</b>
+  <%= @timesheet.tuesday %>
+</p>
+
+<p>
+  <b>Wednesday:</b>
+  <%= @timesheet.wednesday %>
+</p>
+
+<p>
+  <b>Thursday:</b>
+  <%= @timesheet.thursday %>
+</p>
+
+<p>
+  <b>Friday:</b>
+  <%= @timesheet.friday %>
+</p>
+
+<p>
+  <b>Saturday:</b>
+  <%= @timesheet.saturday %>
+</p>
+
+<p>
+  <b>Total hours:</b>
+  <%= @timesheet.total_hours %>
+</p>
+
+<p>
+  <b>Week start date:</b>
+  <%= @timesheet.week_start_date %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @timesheet.status %>
+</p>
+
+<p>
+  <b>Employee:</b>
+  <%= @timesheet.employee_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_timesheet_path(@timesheet) %> |
+<%= link_to 'Back', timesheets_path %>

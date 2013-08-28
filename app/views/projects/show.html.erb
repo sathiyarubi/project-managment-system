@@ -1,0 +1,33 @@
+<h1 id="table-header"> Project details</h1>
+<div class="row">
+  <div id="project-show">
+<p id="notice" style="padding-left: 212px;color:green;"><%= notice %></p>  
+   <div class="small-5 small-centered columns">
+<p>
+  <b>Name:</b>
+  <%= @project.name %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @project.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @project.end_date %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%= @project.client.name %>
+</p>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="small-3 small-centered columns">
+<!--<%= link_to 'Edit', edit_project_path(@project), :class=>"button round" %> |-->
+<%= link_to 'Back', projects_path, :class=>"button round" %>
+</div>
+</div>

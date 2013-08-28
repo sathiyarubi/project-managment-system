@@ -1,0 +1,7 @@
+<h1 id="table-header">Timesheet Details</h1>
+<%= render 'form' %>
+<div class="row">
+  <div class="small-3 small-centered columns">
+<p><%= link_to 'Back', timesheets_path, class: "button round"%></p>
+</div>
+</div>

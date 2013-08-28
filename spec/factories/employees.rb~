@@ -1,0 +1,11 @@
+require 'factory_girl'
+
+FactoryGirl.define do
+  factory :employee do
+  
+   Faker::Name.name    
+   Faker::Internet.email 
+   
+  end
+end
+

@@ -1,0 +1,79 @@
+<h1 id="table-header"> Employee details</h1>
+<div class="row">
+  <div id="employee-show">
+<p id="notice" style="padding-left: 212px;color:green;"><%= notice %></p>  
+   <div class="small-3 small-centered columns">
+<p>
+  <b>Name:</b>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @employee.email %>
+</p>
+<!--
+<p>
+  <b>Password digest:</b>
+  <%= @employee.password_digest %>
+</p>
+-->
+<p>
+  <b>Address:</b>
+  <%= @employee.address %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @employee.gender %>
+</p>
+<!--
+<p>
+  <b>Dob:</b>
+  <%= @employee.dob %>
+</p>
+-->
+<p>
+  <b>City:</b>
+  <%= @employee.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @employee.state %>
+</p>
+
+<p>
+  <b>Pin code:</b>
+  <%= @employee.pin_code %>
+</p>
+
+<p>
+  <b>Mobile no:</b>
+  <%= @employee.mobile_no %>
+</p>
+<!--
+<p>
+  <b>Role:</b>
+  <%= @employee.role_id %>
+</p>
+
+<p>
+  <b>Manager:</b>
+  <%= @employee.manager_id %>
+</p>
+-->
+<!--
+  <% if can? :update, @employee %>
+   <%= link_to 'Edit', edit_employee_path(@employee), class: "button round" %> | |
+  <% end %>
+-->
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="small-3 small-centered columns">
+<%= link_to 'Back', employees_path,class: "button round" %>
+  </div>
+</div>
+

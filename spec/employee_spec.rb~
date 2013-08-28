@@ -1,0 +1,46 @@
+require 'spec_helper'
+
+
+describe Employee do
+
+     it{should have_many(:timesheets)}
+     it{should have_many(:subordinates)}
+     it{should belong_to(:role)}
+     it{should belong_to(:manager)}    
+     
+end
+
+
+describe Employee do
+
+		it { should validate_presence_of(:name) }
+#  			it { should ensure_length_of(:name).is_at_least(2).is_at_most(30) }
+	  it { should_not allow_value('sathiya123').for(:name) }
+	  it { should allow_value('sathiya').for(:name) }
+		it { should ensure_length_of(:email).is_at_most(50) }
+	 	it { should allow_value('test@example.com').for(:email) }
+	 # it { should validate_uniqueness_of(:email) }
+	  it { should validate_presence_of(:gender) }
+	  it { should validate_presence_of(:password)}
+	  it { should validate_confirmation_of(:password)}
+	  it { should ensure_length_of(:password).is_at_least(6).is_at_most(30) }
+	  it { should validate_presence_of(:address) }
+	  it { should validate_presence_of(:city) }
+	  it { should validate_presence_of(:state) }
+	  it { should validate_presence_of(:pin_code) }
+	  it { should validate_numericality_of(:pin_code) }
+	  it { should validate_presence_of(:mobile_no) }
+	  it { should validate_numericality_of(:mobile_no) }
+	  it { should ensure_length_of(:mobile_no) }
+	  #it { should ensure_inclusion_of(:name).in_range(2..30) }
+ 		it { should_not allow_value('956838llpp').for(:mobile_no) }
+ 	  #it { should_not allow_value("").for(:dob) }
+ 		# This is for 
+ 		#it { should validate_uniqueness_of(:email).case_insensitive }
+ 		#it { should validate_uniqueness_of(:email).with_message('its not valid') }
+ 		#it { should_not allow_mass_assignment_of(:mobile_on) }
+ 		#it { should validate_uniqueness_of(:email).scoped_to(:name) }
+		#it { should_not allow_mass_assignment_of(:password) }
+		
+end
+

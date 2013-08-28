@@ -1,0 +1,47 @@
+<h1 id="table-header">Listing timesheets</h1>
+<div class="row">
+    <div class="small-5 push-10" class="small button">
+    <%= link_to 'New Timesheet', new_timesheet_path ,:class=>"small button" %>
+    </div>
+<div>
+<table>
+  <tr>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Total hours</th>
+    <th>Week start date</th>
+    <th>Status</th>
+    <th>Employee</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @timesheets.each do |timesheet| %>
+  <tr>
+    <td><%= timesheet.sunday %></td>
+    <td><%= timesheet.monday %></td>
+    <td><%= timesheet.tuesday %></td>
+    <td><%= timesheet.wednesday %></td>
+    <td><%= timesheet.thursday %></td>
+    <td><%= timesheet.friday %></td>
+    <td><%= timesheet.saturday %></td>
+    <td><%= timesheet.total_hours %></td>
+    <td><%= timesheet.week_start_date %></td>
+    <td><%= timesheet.status %></td>
+    <td><%= timesheet.employee_id %></td>
+    <td><%= link_to 'Show', timesheet %></td>
+    <td><%= link_to 'Edit', edit_timesheet_path(timesheet) %></td>
+    <td><%= link_to 'Destroy', timesheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

@@ -1,0 +1,27 @@
+
+<div class="row" id="profile-row">
+
+    <div class="small-12 columns">
+
+	<%= simple_form_for @project,:validate=>true do |f| %>
+
+	    <%= f.input :name, input_html: { class: 'input-length' } %>
+
+	    <%= f.input :start_date, input_html: { class: 'input-length' }, required: true %>
+
+	    <%= f.input :end_date, input_html: { class: 'input-length' },required:true %>
+
+	    <%= f.association :client, prompt: "Select your client", input_html: { class: 'input-length' } %>
+
+            <br /><br /><br />
+
+	    <%= f.button :submit %>
+
+	<% end %>
+
+    </div>
+
+</div>
+
+
+

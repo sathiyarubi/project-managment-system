@@ -1,0 +1,16 @@
+# Getting spec helper
+require 'spec_helper'
+
+  describe Project do
+  
+        it{should have_many(:timesheet_details)}
+        it { should belong_to(:client) }
+        
+  end
+  describe Project do
+  
+        it{ should validate_presence_of(:name)} 
+        it{should allow_value('test').for(:name)} 
+            
+  end
+   

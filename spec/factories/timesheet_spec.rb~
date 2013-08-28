@@ -1,0 +1,9 @@
+
+FactoryGirl . define do
+    factory :client do
+    
+				 sunday     {'sunday' }
+				
+				 
+    end
+end

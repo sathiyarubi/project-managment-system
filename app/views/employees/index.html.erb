@@ -1,0 +1,50 @@
+<h1 id="table-header">List of employees</h1>
+<div class="row">
+    <div class="push-9 column">
+	<%if current_user.role.name == "Admin"%>
+
+	   <%= link_to 'New Employee',  new_employee_path, class: "button has-title" %>
+	<% end %>        
+    </div>
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Gender</th>
+    <th>Mobile no</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%= employee.name %></td>
+    <td><%= employee.email %></td>
+    <td><%= employee.address %></td>
+    <td><%= employee.gender %></td>
+    <td><%= employee.mobile_no %></td>
+    <td><%= link_to 'Show', employee, class:"button round"%></td>
+	<% if can? :update, @employees %>
+   <td><%= link_to 'Edit', edit_employee_path(employee),class: "button round" %></td>
+       <% end %>
+   
+    <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' },class:"button round" %></td>
+	
+  </tr>
+<% end %>
+</table>
+<br />
+
+
+<div class="custom-pagination">
+
+   		 <%= will_paginate @employees %>
+</div>
+
+
+	   
+
+

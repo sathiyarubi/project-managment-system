@@ -1,0 +1,50 @@
+
+
+  <td>
+
+     <%= f.select("project_id", Project.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'select'} )%>
+  </td>
+   <td>
+ <%= f.select( "activity_id", Activity.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'select'})%>
+   </td>
+  <td>
+    <%= f.text_field :description,:size=>5 %>
+  </td>
+ <td>
+    <%= f.text_field :sunday ,:size=>5, :class=>"days", :onkeyup=>"timesheet(this.id,this.value)"%>
+  </td>
+  <td>
+    <%= f.text_field :monday,:size=>5, :class=>"days", :onkeyup=>"timesheet(this.id,this.value)"%>
+  </td>
+  <td>
+    <%= f.text_field :tuesday,:size=>5, :class=>"days", :onkeyup=>"timesheet(this.id,this.value)" %>
+  </td>
+  <td>
+
+    <%= f.text_field :wednesday,:size=>5, :class=>"days", :onkeyup=>"timesheet(this.id,this.value)" %>
+  </td>
+  <td>
+
+    <%= f.text_field :thursday,:size=>5, :class=>"days", :onkeyup=>"timesheet(this.id,this.value)" %>
+  </td>
+  <td>
+
+    <%= f.text_field :friday,:size=>5, :class=>"days", :onkeyup=>"timesheet(this.id,this.value)" %>
+  </td>
+  <td>
+
+    <%= f.text_field :saturday,:size=>5, :class=>"days", :onkeyup=>"timesheet(this.id,this.value)" %>
+  </td>
+    <td>
+
+    <%= f.text_field :total_hours,:size=>5, :class=>"totalhours" %>
+  </td>
+   
+<!--
+  <td>
+
+  </td>
+-->
+
+
+

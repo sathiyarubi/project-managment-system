@@ -1,0 +1,10 @@
+  require 'spec_helper'
+  
+
+describe Timesheet  do
+
+  it "has a valid factory"
+  it "is invalid without a moday"
+  it "is invalid without a sunday"
+
+end

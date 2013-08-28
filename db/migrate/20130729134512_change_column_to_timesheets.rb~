@@ -1,0 +1,8 @@
+class ChangeColumnToTimesheets < ActiveRecord::Migration
+  def up
+		change_column :timesheets, :status, :boolean
+  end
+  def down
+		change_column :timesheets, :status, :string, :default => "Not Yet Submited"
+  end
+end

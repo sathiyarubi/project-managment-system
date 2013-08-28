@@ -1,0 +1,25 @@
+<div class="small-7 small-centered columns">
+
+	<%= simple_form_for @client, :validate => true do |f| %>
+
+	    <%= f.input :name,input_html: { class: 'input-length',placeholder: "Name"  } %>
+
+	    <%= f.input :email,input_html: { class: 'input-length' },placeholder: "Email" %>  
+
+	    <%= f.input :address,input_html: { class: 'input-length' },placeholder: "Address"  %>
+
+	    <%= f.input :company,input_html: { class: 'input-length' },placeholder: "Company" %>   
+
+	    <%= f.input :city,input_html: { class: 'input-length' },placeholder: "City" %>   
+
+	    <%= f.input :state,input_html: { class: 'input-length' },placeholder: "State" %>   
+
+	    <%= f.input :phone,input_html: { class: 'input-length' },placeholder: "Phone"%>   
+
+	    <%= f.input :zip,input_html: { class: 'input-length',placeholder: "zip" } %>
+            <br /><br /><br />
+	    <%= f.button :submit %>
+		
+	<% end %>
+
+</div>

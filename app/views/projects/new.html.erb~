@@ -1,0 +1,9 @@
+<h1 id="table-header">New project</h1>
+
+<%= render 'form' %>
+
+<div class="row">
+  <div class="small-3 small-centered columns">
+<%= link_to 'Back', projects_path, class: "button round" %>
+</div>
+</div>

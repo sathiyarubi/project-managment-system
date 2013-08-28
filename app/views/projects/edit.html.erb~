@@ -1,0 +1,9 @@
+<h1 id="table-header">Editing project</h1>
+
+<%= render 'form' %>
+<div class="row">
+<div class="small-3 small-centered columns">
+<%= link_to 'Show', @project, class: "button round" %> |
+<%= link_to 'Back', projects_path, class: "button round" %>
+</div>
+</div>

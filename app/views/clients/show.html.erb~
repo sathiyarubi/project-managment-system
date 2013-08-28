@@ -1,0 +1,52 @@
+<h1 id="table-header"> Client details</h1>
+<div class="row">
+  <div id="client-show">
+<p id="notice" style="padding-left: 212px;color:green;"><%= notice %></p>  
+   <div class="small-3 small-centered columns">
+
+<p>
+  <b>Name:</b>
+  <%= @client.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @client.address %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @client.company %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @client.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @client.state %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @client.phone %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @client.zip %>
+</p>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="small-3 small-centered columns">
+<!--<%= link_to 'Edit', edit_client_path(@client),:class=>"button round" %> |-->
+<%= link_to 'Back', clients_path, :class=>"button round" %>
+  </div>
+</div>
+
+
+

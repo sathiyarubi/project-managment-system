@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProjectManagementSystem</title>
+  <%= javascript_include_tag  "rails.validations" %>
+	 <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css",     "application" %>
+	<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
+	<%= csrf_meta_tag %>
+
+</head>
+<body id = "add">
+
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+     <%= link_to image_tag("logo.jpeg",:id=>"logo-image"), url_for({:controller =>'employees', :action => 'index'}) %></a>
+    </li>
+  </ul>
+     <% if current_user %>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
+      <li><%= link_to "Employee", employees_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Project",projects_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Client",clients_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Profile", profile_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Timesheet", timesheets_path %></li>
+      <li class="divider"></li>
+      <li> <%= link_to "Log out", log_out_path %></li>
+    </ul>
+      <% else %>
+       <ul class="right">
+        <li> <%= link_to "Login" %></li>	 
+       </ul>
+  </div>
+    <% end %>
+</nav>
+    <div class="row">
+      <%= yield %>
+    </div>
+</body>
+</html>
+
+
+
