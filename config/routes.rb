@@ -1,14 +1,14 @@
 ProjectManagementSystem::Application.routes.draw do
 
- devise_for :users
 
-  #get "sessions/index"
-  #get "log_out" => "sessions#destroy", :as => "log_out"
-  #get "log_in" => "sessions#new", :as => "log_in"
+
+  get "sessions/index"
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
   get "profile" => "employees#profile", :as=>"profile"
   put "employees/profile_update"
-  #get "timesheets/ajaxtimesheet"
-  #resources :sessions
+  get "timesheets/ajaxtimesheet"
+  resources :sessions
 
   resources :timesheet_details
 
@@ -20,7 +20,7 @@ ProjectManagementSystem::Application.routes.draw do
 
   resources :employees
 
-  root :to => 'employees#new'
+  root :to => 'sessions#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -20,8 +20,9 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-	
+</head>
+<body id = "add">
+
 <nav class="top-bar">
   <ul class="title-area">
     <li class="name">
@@ -30,14 +31,29 @@
   </ul>
      <% if current_user %>
   <section class="top-bar-section">
-    
+    <ul class="right">
+      <li class="divider"></li>
+      <li><%= link_to "Employee", employees_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Project",projects_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Client",clients_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Profile", profile_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to "Timesheet", timesheets_path %></li>
+      <li class="divider"></li>
+      <li> <%= link_to "Log out", log_out_path %></li>
+    </ul>
+      <% else %>
+       <ul class="right">
+        <li> <%= link_to "Login" %></li>   
+       </ul>
   </div>
     <% end %>
 </nav>
     <div class="row">
-    <%= yield %>
-     </div>	
-    
-    <%= javascript_include_tag "application" %>
-  </body>
+      <%= yield %>
+    </div>
+</body>
 </html>

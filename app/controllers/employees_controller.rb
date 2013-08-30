@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
-  before_filter :authenticate_user!
+
     load_and_authorize_resource
 
   def index
